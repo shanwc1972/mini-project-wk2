@@ -1,0 +1,126 @@
+:root {
+  /* declare a variable with `--` syntax */
+  --darkgray: rgb(55,55,71);
+  --lightmagenta: rgb(246,113,246);
+}
+
+* {
+    box-sizing: border-box;
+    background: var(--darkgray);
+  }
+  
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+
+  header {
+    text-align: left;
+    color: var(--lightmagenta);
+  }
+  
+  main {
+    /* Turns this element into a flexbox */
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+    margin: 2%;
+    color: var(--lightmagenta);
+  }
+
+  main h2{
+    margin: 15px;
+    text-align: left;
+    position: relative;
+    margin-top: -20px;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: white;
+    padding: 5px;
+  }
+
+  main section{
+    margin: 15px;
+  }
+
+  main p{
+    margin-left: 10px;
+    text-align: left;
+    font-size: small;
+  }
+  
+  .main-header {
+    padding: 2%;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+  }
+
+  .main-header h1{
+    text-align: center;
+    color: var(--lightmagenta);
+    font-size: xx-large;
+  }
+  
+  .card {
+    text-align: center;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: white;
+    padding: 1%;
+    flex: 1 0 25%;
+    min-width: 300px;
+  }
+  
+  .card header {
+    padding: 20px;
+  }
+
+  .code-card{
+    padding: 2%;
+    text-align: left;
+    font-size: small;
+    color: white;
+    display: flex;
+    border-radius: 8px;
+    background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%);
+    flex-grow: 1;
+  }
+
+  .code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}
+
+.card:hover{
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}
+
+  pre{
+    background-color: rgb(255,255,255,0);
+  }
+
+  footer{
+    margin-top: 15px;
+    text-align: center;
+    color: var(--lightmagenta);
+  }
+
+  .code-card pre:active {
+    user-select: all;
+  }
+
+  /* @media screen and (max-width: 768px) {
+    .card {
+     width: 50%; 
+    }
+  }*/
+  
+  @media screen and (max-width: 576px) {
+    .card {
+      min-width: 300; 
+     }
+  }
